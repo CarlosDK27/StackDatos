@@ -8,40 +8,78 @@ import 'package:flutter/material.dart';
      return Scaffold(
        appBar: AppBar(
          title: const Text('Pagina Stack'),
-         backgroundColor: Colors.blue[200],
+         backgroundColor: Color.fromARGB(255, 144, 249, 205),
        ),
+
        body: Center(
              child: SizedBox (
              width: 300.0,
              height: 300.0,
             child: Center(
             child: Stack(
-            clipBehavior: Clip.antiAliasWithSaveLayer, fit: StackFit.expand,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+             fit: StackFit.expand,
             overflow: Overflow.visible,
             children:<Widget>[
+
+         ////IMAGEN/////////
           Container(
           width: 300.0,
           height: 300.0,
-          color: Colors.red,
+          //color: Colors.red,
+           padding: const EdgeInsets.all(15.0),
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                    image: NetworkImage('https://scontent.fntr4-1.fna.fbcdn.net/v/t1.6435-9/156053150_2262475617220007_4492042514130022704_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeE2Glz2QNMdjIt4cA_0UvZm7_rekfho4R_v-t6R-GjhH4JnGWoNbBU1cnR7IrmqaxUK3Io-XCAva700EjAmFN_1&_nc_ohc=nGDotPZghd0AX_CTg2R&_nc_ht=scontent.fntr4-1.fna&oh=00_AT9kH4Mn2VQCdzzCftp1aHIfxLm21cfldG4Dp2jgy5AbKA&oe=62449599')
+                    )
+                    ),
+
+
+         //TEXTO//
          ),
            Positioned(
-           top: 80.0,
-           left: 80.0,
+           top: 230.0,
+           left: 70.0,
            child: Container(
-          width: 250.0,
-          height: 250.0,
-          color: Colors.black,
+          width: 180.0,
+          height: 20.0,
+          //color: Colors.black,
+          child: const Text('Trejo Ramirez Carlos Adrian',
+          style:
+          TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
                    ) 
                  ) ,
-                 Positioned(
-           top: 20.0,
-           left: 20.0,
+
+
+          //BOTON
+           Positioned(
+           top: 250.0,
+           left: 81.0,
            child: Container(
-          width: 200.0,
-          height: 200.0,
-          color: Color.fromARGB(255, 111, 0, 255),
+          width: 150.0,
+          height: 50.0,
+         child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        Color.fromARGB(255, 119, 2, 113)),
+                    padding: MaterialStateProperty.all(
+                        const EdgeInsets.symmetric(
+                            horizontal: 25, vertical: 15)),
+                    textStyle: MaterialStateProperty.all(
+                        const TextStyle(fontSize: 15))),
+                child: const Text('Regresar'),
+                onPressed: () => Navigator.pop(context),
+              )
+            ]),
+                  
+                    
                    ) 
                  ) 
+
         ], 
        ), 
       ),

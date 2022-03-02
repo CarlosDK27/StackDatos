@@ -34,7 +34,7 @@ return Scaffold(
         centerTitle: true,
         title: const Text('Pagina inicial'),
         elevation: 20.0,
-        shadowColor: Color.fromARGB(255, 2, 248, 146),
+        shadowColor: Color.fromARGB(255, 68, 2, 248),
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(15))),
         actions: <Widget>[
@@ -46,7 +46,6 @@ return Scaffold(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-           
             const SizedBox(height: 20.0),
             ElevatedButton(
                 style: ButtonStyle(
@@ -92,7 +91,7 @@ return Scaffold(
                   onPressed: (){
                     Navigator.pushNamed(context,'/stack');
                   },
-                  child: const Text('Stack'),
+                  child: const Text('Pagina Datos Stack'),
                   )
           ],
         ),
