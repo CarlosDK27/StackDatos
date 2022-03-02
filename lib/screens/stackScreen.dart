@@ -39,14 +39,20 @@ import 'package:flutter/material.dart';
          ),
            Positioned(
            top: 230.0,
-           left: 70.0,
+           left: 30.0,
            child: Container(
-          width: 180.0,
+          width: 260.0,
           height: 20.0,
           //color: Colors.black,
           child: const Text('Trejo Ramirez Carlos Adrian',
+          
           style:
-          TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
+          TextStyle(
+            fontSize: 12.0,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 4.0,
+            color: Color.fromARGB(255, 151, 223, 85))),
                    ) 
                  ) ,
 
@@ -65,7 +71,7 @@ import 'package:flutter/material.dart';
               ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(255, 119, 2, 113)),
+                        Color.fromARGB(255, 119, 2, 94)),
                     padding: MaterialStateProperty.all(
                         const EdgeInsets.symmetric(
                             horizontal: 25, vertical: 15)),
